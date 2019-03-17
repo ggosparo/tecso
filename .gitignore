@@ -1,0 +1,14 @@
+**/.idea
+Dockerfile
+**/*.tgz
+**/*.gz
+database
+docker-compose.yml
+ws
+php
+tmp
+tecnica_java.zip
+log4j-1.2.8.jar
+killTomcat.sh
+**/*.swp
+**/tomcat

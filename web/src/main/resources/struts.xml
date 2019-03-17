@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.mapper.action.prefix.enabled" value="true"/>
+
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="">
+            <result>/panel.jsp</result>
+        </action>
+        <!-- menu -->
+        <action name="abmPersona" class="com.dev.action.menu.MenuAction" method="abmPersona">
+            <result>/abmPersona.jsp</result>
+        </action>
+        <action name="abmAlumno" class="com.dev.action.menu.MenuAction" method="abmAlumno">
+            <result>/abmAlumno.jsp</result>
+        </action>
+        <action name="reporteAcademico" class="com.dev.action.menu.MenuAction" method="reporteAcademico">
+            <result>/reporteAcademico.jsp</result>
+        </action>
+        <action name="reporteAsignatura" class="com.dev.action.menu.MenuAction" method="reporteAsignatura">
+            <result>/reporteAsignatura.jsp</result>
+        </action>
+        <action name="inscripcionMateria" class="com.dev.action.menu.MenuAction" method="inscripcionMateria">
+            <result>/inscripcionMateria.jsp</result>
+        </action>
+        <!-- persona -->
+        <action name="aceptarPersona" class="com.dev.action.persona.PersonaAction" method="aceptar">
+            <result>/abmPersona.jsp</result>
+            <result name="input">/abmPersona.jsp</result>
+        </action>
+        <action name="cancelarPersona" class="com.dev.action.persona.PersonaAction" method="cancelar">
+            <result>/abmPersona.jsp</result>
+            <result name="input">/abmPersona.jsp</result>
+        </action>
+        <action name="actualizarPersona" class="com.dev.action.persona.PersonaAction" method="actualizar">
+            <result>/abmPersona.jsp</result>
+            <result name="input">/abmPersona.jsp</result>
+        </action>
+        <action name="borrarPersona" class="com.dev.action.persona.PersonaAction" method="borrar">
+            <result>/abmPersona.jsp</result>
+            <result name="input">/abmPersona.jsp</result>
+        </action>
+        <!-- Alumno -->
+        <action name="aceptarAlumno" class="com.dev.action.alumno.AlumnoAction" method="aceptar">
+            <result>/abmAlumno.jsp</result>
+            <result name="input">/abmAlumno.jsp</result>
+        </action>
+        <action name="cancelarAlumno" class="com.dev.action.alumno.AlumnoAction" method="cancelar">
+            <result>/abmAlumno.jsp</result>
+            <result name="input">/abmAlumno.jsp</result>
+        </action>
+        <action name="actualizarAlumno" class="com.dev.action.alumno.AlumnoAction" method="actualizar">
+            <result>/abmAlumno.jsp</result>
+            <result name="input">/abmAlumno.jsp</result>
+        </action>
+        <action name="borrarAlumno" class="com.dev.action.alumno.AlumnoAction" method="borrar">
+            <result>/abmAlumno.jsp</result>
+            <result name="input">/abmAlumno.jsp</result>
+        </action>
+        <!-- buscarReporteAcademico -->
+        <action name="buscarReporteAcademico" class="com.dev.action.reporteAcademico.ReporteAcademicoAction">
+            <result>/reporteAcademico.jsp</result>
+            <result name="input">/reporteAcademico.jsp</result>
+        </action>
+        <!-- buscarReporteAsignatura -->
+        <action name="buscarReporteAsignatura" class="com.dev.action.reporteAsignatura.ReporteAsignaturaAction">
+            <result>/reporteAsignatura.jsp</result>
+            <result name="input">/reporteAsignatura.jsp</result>
+        </action>
+        <!-- inscripcionMateria -->
+        <action name="inscripcionMateria" class="com.dev.action.inscripcionMateria.InscripcionMateriaAction">
+            <result>/inscripcionMateria.jsp</result>
+            <result name="input">/inscripcionMateria.jsp</result>
+        </action>
+        <action name="inscripcionMateriaCarrera" class="com.dev.action.inscripcionMateria.InscripcionMateriaAction"
+                method="buscarCarrera">
+            <result>/inscripcionMateria.jsp</result>
+            <result name="input">/inscripcionMateria.jsp</result>
+        </action>
+        <action name="inscripcionMateriaCurso" class="com.dev.action.inscripcionMateria.InscripcionMateriaAction"
+                method="buscarCurso">
+            <result>/inscripcionMateria.jsp</result>
+            <result name="input">/inscripcionMateria.jsp</result>
+        </action>
+        <action name="aceptarInscripcionMateria" class="com.dev.action.inscripcionMateria.InscripcionMateriaAction"
+                method="aceptar">
+            <result>/inscripcionMateria.jsp</result>
+            <result name="input">/inscripcionMateria.jsp</result>
+        </action>
+        <action name="cancelarInscripcionMateria" class="com.dev.action.inscripcionMateria.InscripcionMateriaAction"
+                method="cancelar">
+            <result>/inscripcionMateria.jsp</result>
+            <result name="input">/inscripcionMateria.jsp</result>
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties - Driver, URL, user, password -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://10.10.11.3:5432/tecso</property>
+        <property name="hibernate.connection.username">tecso</property>
+        <property name="hibernate.connection.password">Tecso1234</property>
+        <!-- Connection Pool Size -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache -->
+        <!--<property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+        <!-- Outputs the SQL queries, should be disabled in Production -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Dialect is required to let Hibernate know the Database Type, MySQL, Oracle etc
+            Hibernate 4 automatically figure out Dialect from Database Connection Metadata -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+        <!-- mapping file, we can use Bean annotations too -->
+        <mapping class="com.dev.model.Persona"/>
+        <mapping class="com.dev.model.Alumno"/>
+        <mapping class="com.dev.model.Carrera"/>
+        <mapping class="com.dev.model.Curso"/>
+        <mapping class="com.dev.model.InscripcionesCarrera"/>
+        <mapping class="com.dev.model.AlumnoCarrera"/>
+        <mapping class="com.dev.model.InscripcionesCurso"/>
+        <mapping class="com.dev.model.AlumnoCurso"/>
+        <mapping class="com.dev.model.ProfesoresCurso"/>
+    </session-factory>
+</hibernate-configuration>
