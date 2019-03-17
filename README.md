@@ -1,4 +1,4 @@
-##Base de datos
+## Base de datos
 Dentro del directorio base de datos se pasa un archivo sql con el diseño de base de datos y también contiene los datos de pruebas utilizados.
 
 Una persona es una profesor sino esta asociado en la tabla de alumnos.
@@ -19,9 +19,9 @@ CREATE TABLE profesores_curso
 );
 ```
 
-##tecnica.java
-###workspace.sql
+## tecnica.java
+### workspace.sql
 Dentro del archivo `ejercicios-db.sql` se encuentran las respuestas.
 
-###workspace-java
+### workspace-java
 Los ejercicios estan resueltos dentro del directorio src y cada ejercicio esta resuelto dentro de cada directorio.
